@@ -1,6 +1,12 @@
-import './index.css';
 import _ from 'loadsh';
-document.getElementById('button1').addEventListener("click", function() {
+import style from './index.css';
+import './clearButton';
+
+console.log(style); 
+
+const btn1 = document.getElementById("button1"); 
+
+btn1.addEventListener("click", function() {
   const el = document.getElementById("header");
   el.innerHTML = "Hey i have updated the code !";
 
@@ -14,4 +20,4 @@ document.getElementById('button1').addEventListener("click", function() {
 });
 });
 
-
+btn1.classList.add([style.button]);

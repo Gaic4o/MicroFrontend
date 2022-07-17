@@ -10,7 +10,10 @@ module.exports = {
         rules: [ // 이 2개가 일치해야 - 파일형식이 무엇인지 정의합니다.
             {
                 test: /.css$/,
-                use: ["style-loader", "css-loader"] // 왼쪽에서 오른쪽으로 실행 됩니다.
+                use: [
+                { loader: "style-loader" },
+                { loader: "css-loader", options: { modules: true } }  ],
+                // use: ["style-loader", "css-loader"] // 왼쪽에서 오른쪽으로 실행 됩니다.
             }
         ]
     }
